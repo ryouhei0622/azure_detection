@@ -19,6 +19,7 @@ def get_tags(file_path: str) -> list[str]:
 
     for tag in image_analysis.tags:
         tag_list.append(tag.name)
+    tag_list.pop(0)
     return tag_list
 
 
@@ -30,8 +31,9 @@ def detect_objects(file_path: str) -> list:
 
 
 if __name__ == "__main__":
-    local_image_path = "/Users/a81701/code/streamlit/detection/02_物体検出アプリ/sample01.jpg"
+    local_image_path = "//Users/a81701/code/streamlit/detection/img/sample01.jpg"
     print(get_tags(local_image_path))
 
-    l = detect_objects(local_image_path)
-    print(l[0].object_property)
+    # l = detect_objects(local_image_path)
+    # for obj in l:
+    #     print(obj.object_property)
