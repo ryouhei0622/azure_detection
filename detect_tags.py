@@ -6,8 +6,8 @@ from azure.cognitiveservices.vision.computervision import ComputerVisionClient
 from azure.cognitiveservices.vision.computervision.models import VisualFeatureTypes
 from msrest.authentication import CognitiveServicesCredentials
 
-with open("secret.json") as f:
-    secret = json.load(f)
+# with open("secret.json") as f:
+#     secret = json.load(f)
 # KEY = secret["KEY"]
 # ENDPOINT = secret["ENDPOINT"]
 KEY = st.secrets.AzureApiKey.KEY
