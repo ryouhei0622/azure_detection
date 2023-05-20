@@ -1,3 +1,4 @@
 02_物体検出アプリ
 .DS_Store
 secret.json
+__pycache__
