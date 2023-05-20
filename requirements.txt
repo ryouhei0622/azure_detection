@@ -1,4 +1,4 @@
 azure-cognitiveservices-vision-computervision
 msrest
-Pillo
+Pillow
 streamlit
