@@ -18,8 +18,10 @@ client = ComputerVisionClient(ENDPOINT, CognitiveServicesCredentials(KEY))
 # analysis
 print("===== Analyze an image =====")
 url = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Broadway_and_Times_Square_by_night.jpg/450px-Broadway_and_Times_Square_by_night.jpg"
+local_image_path = "/Users/a81701/code/streamlit/detection/02_物体検出アプリ/sample01.jpg"
+local_image = open(local_image_path, "rb")
 
-image_analysis = client.analyze_image(url, visual_features=[VisualFeatureTypes.tags])
+image_analysis = client.analyze_image_in_stream(local_image, visual_features=[VisualFeatureTypes.tags])
 
 for tag in image_analysis.tags:
     print(tag.name)
